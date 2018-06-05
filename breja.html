@@ -20,10 +20,10 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#Produto.html">Churrascômetro 1.0</a>
+      <a class="navbar-brand" href="#">Churrascômetro 1.0</a>
     </div>
     <ul class="nav navbar-nav">
-      <li ><a href="Produto.html" target="_self">Carne</a></li>
+      <li ><a href="index.html" target="_self">Carne</a></li>
       <li class="active"><a href="breja.html" target="_self">Cerveja</a></li>
       <li><a href="refri.html" target="_self">Refrigerante</a></li>
     </ul>
@@ -37,24 +37,29 @@
 
 		<div data-role="header" data-position="inline">
 			<div class="container center">
-			<h1><b>Cálculo médio de cerveja(3 ou 6 latas por pessoas)</b></h1>
+			<h1><b>Cálculo médio de cerveja</b></h1>
 			</div>
 		</div>
 
 		<div class="container center">
-			<form onsubmit= "return calcular2();" accept-charset="utf-8">
+			<form onsubmit= "return bebida();" accept-charset="utf-8">
 				<div class="col-sm-6">
-					<label for="valor_a"><h5>Valor fardo:</h5></label>
-					<input type="text" id="valor_a" name="valor_a" placeholder="Somente números" required>
+					<label for="valor_fardo"><h5>Valor fardo (Tamanho tradicional 12 Latas):</h5></label>
+					<input type="text" id="valor_fardo" name="valor_fardo" placeholder="Somente números" required>
 				</div>
 			
 				<div class="col-sm-6">
-					<label for="cpf"><h5>Quantidade de Pessoas que irão beber:</h5></label>
-					<input type="number" id="qtd_a" name="qtd_a" placeholder="Somente números" required>
+					<label for="qtd_bedados"><h5>Quantidade de Pessoas que irão beber 6 Latas:</h5></label>
+					<input type="number" id="qtd_bedados_1" name="qtd_bedados_1" placeholder="Somente números" required>
+				</div>
+
+				<div class="col-sm-6">
+					<label for="qtd_bedados"><h5>Quantidade de Pessoas que irão beber 3 Latas:</h5></label>
+					<input type="number" id="qtd_bedados_2" name="qtd_bedados_2" placeholder="Somente números" required>
 				</div>
 			
 				<div class="col-sm-8">
-					<input type="submit" name="calcular" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Calcular">
+					<input type="submit" name="calcular2" class="ui-btn ui-corner-all ui-btn-a ui-btn-active ui-radio-on ui-first-child" value="Calcular">
 					<br>
 					<br>
 					<br>
@@ -69,46 +74,28 @@
 			<h1><b>Resultado</b></h1>
 			</div>
 		</div>
-		
+	
 		<div class="container">
-			<div class="col-sm-8">
-				<div class="collection container-center" name="valor_carne_a" id="valor_carne_a"></div>
-				<div class="collection container-center" name="quantia_pessoa_a" id="quantia_pessoa_a"></div>
-				<div class="collection container-center" name="total_carne_a" id="total_carne_a"></div>
-			</div>
+			<div class="col-sm-6">
+				<br>
+				<div class="panel panel-default">
+    				<div class="panel-body">
+						<div class="collection container-center" name="valor_compra_breja_1" id="valor_compra_breja_1"></div>
+						<div class="collection container-center" name="quantia_breja_1" id="quantia_breja_1"></div>
+						<div class="collection container-center" name="media__breja_1" id="media__breja_1"></div>
+						<br><br>
+					</div>
+				</div>
+				<div class="panel panel-default">
+    				<div class="panel-body">
+						<div class="collection container-center" name="valor_compra_breja_2" id="valor_compra_breja_2"></div>
+						<div class="collection container-center" name="quantia_breja_2" id="quantia_breja_2"></div>
+						<div class="collection container-center" name="media__breja_2" id="media__breja_2"></div>
+						<br><br>
+					</div>
+				</div>
+			</div>	
 		</div>
 
-
-		<!-- Modal -->
-  			<div class="modal fade" id="myModal" role="dialog">
-    			<div class="modal-dialog modal-md">
-      				<div class="modal-content">
-        				<div class="modal-header">
-        					<div class="col-md-8">
-          					<span>Produto cadastrado com sucesso!</span>	
-        					</div>
-        				</div>
-      			  	
-      			  		<div class="modal-footer primary">
-      			  			
-      			  				<span>Toque em qualquer lugar para continuar</span>	
-        				</div>
-      				
-      				</div>
-    			</div>
-  			</div>
-
-	<style>
-  .modal-header, h4, .close {
-      background-color: #5cb85c;
-      color:white !important;
-      text-align: left;
-  }
-  .modal-footer {
-      background-color: #f9f9f9;
-  }
-  </style>
-    	
-    	<script src="js/sweetalert-dev.js"></script>
 	</body>
 </html>

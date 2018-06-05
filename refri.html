@@ -16,41 +16,39 @@
 	<body>
 
 		<script src="js/teste.js"></script>
+
+
 		
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#Produto.html">Churrascômetro 1.0</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li ><a href="Produto.html" target="_self">Carne</a></li>
-      <li><a href="breja.html" target="_self">Cerveja</a></li>
-      <li class="active"><a href="refri.html" target="_self">Refrigerante</a></li>
-    </ul>
-  </div>
-</nav>
+		<nav class="navbar navbar-default">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<a class="navbar-brand" href="#">Churrascômetro 1.0</a>
+    			</div>
+    			
+    			<ul class="nav navbar-nav">
+      				<li ><a href="index.html" target="_self">Carne</a></li>
+      				<li><a href="breja.html" target="_self">Cerveja</a></li>
+      				<li class="active"><a href="refri.html" target="_self">Refrigerante</a></li>
+    			</ul>
+  			</div>
+		</nav>
 	
-
-
-
-
-
 		<div data-role="header" data-position="inline">
 			<div class="container center">
-			<h1><b>Cálculo de Refrigerante(1L por pessoa)</b></h1>
+				<h1><b>Cálculo de Refrigerante(1L por pessoa)</b></h1>
 			</div>
 		</div>
 
 		<div class="container center">
-			<form onsubmit= "return calcular2();" accept-charset="utf-8">
+			<form onsubmit= "return refri();" accept-charset="utf-8">
 				<div class="col-sm-6">
-					<label for="valor_a"><h5>Valor :</h5></label>
-					<input type="text" id="valor_a" name="valor_a" placeholder="Somente números" required>
+					<label for="valor_refri"><h5>Valor :</h5></label>
+					<input type="text" id="valor_refri" name="valor_refri" placeholder="Somente números" required>
 				</div>
 			
 				<div class="col-sm-6">
-					<label for="cpf"><h5>Quantidade de Pessoas que irão beber:</h5></label>
-					<input type="number" id="qtd_a" name="qtd_a" placeholder="Somente números" required>
+					<label for="num_bebedores"><h5>Quantidade de Pessoas que irão beber:</h5></label>
+					<input type="number" id="num_bebedores" name="num_bebedores" placeholder="Somente números" required>
 				</div>
 			
 				<div class="col-sm-8">
@@ -58,58 +56,33 @@
 					<br>
 					<br>
 					<br>
-					<br>
-					<br>
 				</div>
-			
+
 
 			</form>
 		</div>
 
 		<div data-role="header" data-position="inline">
 			<div class="container center">
-			<h1><b>Resultado</b></h1>
+				<h1><b>Resultado</b></h1>
 			</div>
+		</div>
+
+		<div class="container">
+			<div class="col-sm-4">
+				<br>
+				<div class="panel panel-default">
+    				<div class="panel-body">
+						<div class="collection container-center" name="valor_total_refri" id="valor_total_refri"></div>
+						<div class="collection container-center" name="quantia_refri" id="quantia_refri"></div>
+						<div class="collection container-center" name="media_refri" id="media_refri"></div>
+						<br><br>
+					</div>
+				</div>
+				
+			</div>	
 		</div>
 		
-		<div class="container">
-			<div class="col-sm-8">
-				<div class="collection container-center" name="valor_carne_a" id="valor_carne_a"></div>
-				<div class="collection container-center" name="quantia_pessoa_a" id="quantia_pessoa_a"></div>
-				<div class="collection container-center" name="total_carne_a" id="total_carne_a"></div>
-			</div>
-		</div>
-
-
-		<!-- Modal -->
-  			<div class="modal fade" id="myModal" role="dialog">
-    			<div class="modal-dialog modal-md">
-      				<div class="modal-content">
-        				<div class="modal-header">
-        					<div class="col-md-8">
-          					<span>Produto cadastrado com sucesso!</span>	
-        					</div>
-        				</div>
-      			  	
-      			  		<div class="modal-footer primary">
-      			  			
-      			  				<span>Toque em qualquer lugar para continuar</span>	
-        				</div>
-      				
-      				</div>
-    			</div>
-  			</div>
-
-	<style>
-  .modal-header, h4, .close {
-      background-color: #5cb85c;
-      color:white !important;
-      text-align: left;
-  }
-  .modal-footer {
-      background-color: #f9f9f9;
-  }
-  </style>
     	
     	<script src="js/sweetalert-dev.js"></script>
 	</body>
