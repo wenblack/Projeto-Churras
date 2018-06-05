@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.myapp.br" version="1.0.0" xmlns="http://www.w3.org/ns/widgets"
+	xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>Ajudante de designação</name>
+	<description>
+		Designe e controle os pontos dos participantes de forma inteligente
+	</description>
+	<author href="" email="wenblack012@gmail.com">Wender</author>
+	<!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
+	<content src ="index.html" />
+	<plugin name="cordova-plugin-whitelist" spec="1" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="sms:*" />
+	<allow-intent href="mailto:*" />
+	<allow-intent href="geo:*" />
+	<allow-intent href= "whatsapp:*" />
+	
+	<platform name="android">
+		<allow-intent href="market:*" />
+		<icon src="resources/icon.png" />
+		<splash src="resources/splash.png" />
+		<config-file target="AndroidManifest.xml" parent="/*">
+         	<uses-permission android:name="android.permission.INTERNET" />
+         	<uses-permission android:name="android.permission.NETWORK_ACCESS" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    	</config-file>
+
+    	<access origin="whatsapp:*"/>
+    	<access origin="whatsapp:*" launch-external="yes" />
+    	<access origin="mailto:*"/>
+    	<access origin="mailto:*" launch-external="yes" />
+
+	</platform>
+	<platform name="ios">
+		<allow-intent href="itms:*" />
+		<allow-intent href="itms-apps:*" />
+	</platform>
+</widget>
